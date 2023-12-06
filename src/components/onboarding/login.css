@@ -1,0 +1,99 @@
+.Login_main {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    animation: slideInRight;
+    animation-duration: 1s;
+}
+
+.Login_Main_Wrap {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Login_Email_input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* margin-top: 10px; */
+}
+
+.Email_input {
+    width: 250px;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+}
+
+label {
+    font-size: 18px;
+    color: lightgray;
+    font-weight: lighter;
+}
+
+.Login_Password_input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* margin-top: 20px; */
+
+}
+
+.PasswordInputWrap {
+    width: 270px;
+    height: 50px;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.passwordInput {
+    width: 220px;
+    height: 30px;
+    border: none;
+    padding: 10px;
+    outline: none;
+    margin-left: 5px;
+}
+
+.Login_Button_Div {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.Login_Button {
+    width: 270px;
+    height: 40px;
+    color: white;
+    background-color: transparent;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    transition:  0.8s;
+    color: black;
+
+}  
+.b1{
+  background: -webkit-linear-gradient(transparent 50%, #a20402 100%);
+  background-size: 100% 200px;
+  border: 1px solid #a20402;
+}
+.b1:hover{
+  background-position: -270px 40px;
+  background-size: -100px 120px;
+  color: white;
+  border: none;
+  }

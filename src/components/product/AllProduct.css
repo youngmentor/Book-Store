@@ -1,0 +1,107 @@
+.AllProduct_main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 20px;
+}
+.AllProduct_main h3{
+    font-size: 30px;
+    letter-spacing: 5px;
+    color: #A20402;
+    font-family: "Work Sans";
+    font-weight: 700;
+}
+.AllProduct_main_wrap{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.Allproduct_Card{
+    width: 250px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.AllproductImage_div{
+    width: 250px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7F7F7;
+    /* background-color: green; */
+    border-radius: 8px;
+
+}
+.AllproductImage_div img{
+    width: 80%;
+    height:250px;
+    border-radius: 8px;
+
+}
+.ProducT_name:hover{
+    color: #A20402;
+}
+.AllProduct_details{
+    border-bottom: 1px solid #F7F7F7;
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.AllProduct_details p{
+    font-weight: lighter;
+    /* font-family: "Work Sans"; */
+}
+.AddToCartPage{
+    width: 90%;
+    padding: 10px;
+}
+.AddToCartPage p{
+    color: #848484;
+    cursor: pointer;
+}
+.AddToCartPage p:hover{
+    color: #A20402;
+}
+.books1{
+    animation: slideInDown;
+    animation-duration: 1s;
+}
+.books2{
+    animation: slideInUp;
+    animation-duration: 1s;
+}
+.books3{
+    animation: slideInDown;
+    animation-duration: 1s;
+}
+.books4{
+    animation: slideInUp;
+    animation-duration: 1s;
+}
+.Load_more_button{
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #848484;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.Load_more_button:hover{
+    background-color: #A20402;
+    color: white;
+}
+.Product_price{
+    color: #A20402;
+}

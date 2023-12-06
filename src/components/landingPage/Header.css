@@ -1,0 +1,203 @@
+.Header_Main {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+}
+
+.Header_Main_Wrap {
+    width: 90%;
+    height: 100%;
+    display: flex;
+}
+
+.Header_LoginDropper {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    right: 40px;
+    top: 70px;
+    /* background-color: blue; */
+}
+
+.Header_Search_Dropper {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 250px;
+    z-index: 1;
+    background-color: white;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+    animation: slideInDown;
+    animation-duration: 0.5s;
+
+}
+
+.Header_CartDropper {
+    width: 500px;
+    height: 90vh;
+    border-radius: 8px;
+    position: absolute;
+    right: 40px;
+    top: 70px;
+    background-color: white;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+    animation: slideInRight;
+    animation-duration: 1s;
+    
+}
+.Header_CartDropper_Wrap{
+    width: 100%;
+    height: 70vh;
+    overflow-y: scroll;
+}
+.Header_cart_button_div{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Header_cart_button_wrap{
+    width: 90%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sub_total_div{
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Clear_cart_button{
+    width: 180px;
+    height: 40px;
+    border: 1px solid #f7f7ff;
+    border-radius: 8px;
+}
+.Clear_cart_button:hover{
+    border:1px solid  #A20402;
+    /* color: white; */
+    background-color: transparent;
+}
+.checkout_button{
+    width: 180px;
+    height: 40px;
+    border: 1px solid #f7f7ff;
+    border-radius: 8px;
+    background-color: #A20402;
+    color: white;
+}
+.Header_Logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.Header_Logo h2 {
+    font-weight: bolder;
+    font-size: 30px;
+    font-family: 'Rubik Bubbles';
+}
+
+.Header_Navigation {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Header_Navigation p:hover {
+    color: #A20402;
+    cursor: pointer;
+}
+
+.Header_icons_holder {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    padding-right: 10px;
+}
+
+.Header_icons {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightgray;
+}
+
+.Header_icons:hover {
+    cursor: pointer;
+    /* transform: scale(1.1); */
+    border: 1px solid #A20402;
+}
+
+.icons {
+    width: 25px;
+    height: 20px;
+}
+
+.icons:hover {
+    color: #A20402;
+}
+.Header_burger{
+    display: none;
+}
+.Header_cart_count_display{
+    width: 20px;
+    height: 18px;
+    background-color: #A20402;
+    border-radius: 50%;
+    position: relative;
+    bottom: 15px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 10px;
+}
+@media screen and (min-width: 200px) and (max-width: 768px) {
+    .Header_Navigation {
+        display: none;
+    }
+
+    .Header_Logo {
+        width: 50%;
+    }
+    .Header_Logo h2{
+        font-size: 20px;
+    }
+    .Header_icons_holder {
+        display: none;
+    }
+    .Header_burger{
+        width: 50%;
+        height: 100%;
+        display: flex;
+       justify-content: flex-end;
+       align-items: center;
+    }
+    .Hamburger_icon{
+        width: 40px;
+        height: 30px;
+    }
+}

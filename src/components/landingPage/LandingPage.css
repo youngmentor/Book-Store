@@ -1,0 +1,106 @@
+.Landing_Page_Main{
+    width: 100%;
+    height: 100vh;
+}
+.Landing_Page_Wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: -100;
+    margin-top: 130px;
+}
+.Landing_Wrap{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+.Comic_Books{
+/* border-radius: 5px; */
+overflow: hidden;
+position: relative;
+width: 250px;
+height: 400px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+}
+.Comic_Books img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: transform 300ms;
+}
+.Comic_Books p{
+    position: relative;
+
+}
+.Comic_Books:hover .textblock{
+    background-color: color-mix(in srgb,  black 60%);
+}
+.Comic_Books:hover img{
+    transform: scale(1.2);
+}
+.Comic_Books .textblock{
+    position: absolute;
+    top: 10;
+    left: 10;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 300ms;
+}
+.Inspirational_books{
+    width: 300px;
+    height: 400px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./2.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    cursor: pointer;
+}
+.Business_books{
+    width: 300px;
+    height: 400px;
+    background-color: red; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./3.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    cursor: pointer;
+}
+.Relationship_books{
+    width: 300px;
+    height: 400px;
+    background-color: red; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./1.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    cursor: pointer;
+}
+.Category_Name{
+    width: 300px;
+    height: 40px;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
