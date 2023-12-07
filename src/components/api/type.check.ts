@@ -35,27 +35,28 @@ export interface CartItem {
 export interface CartState {
     cart: CartItem[];
     cartCount: number;
+    price: number;
+    total: number;
 };
 // Define actions for your cart
 export interface AddToCartAction {
     type: 'ADD_TO_CART';
     payload: CartItem;
-  }
-  
-  export interface RemoveFromCartAction {
+}
+
+export interface RemoveFromCartAction {
     type: 'REMOVE_FROM_CART';
-    payload: number;
-  }
-  
-  export interface UpdateQuantityAction {
+    payload: { id: number };
+}
+export interface ClearCart {
+    type: 'CLEAR_CART';
+}
+export interface UpdateQuantityAction {
     type: 'UPDATE_QUANTITY';
     payload: { id: number; quantity: number };
-  }
-  export interface UpdateCartCount {
+}
+export interface UpdateCartCount {
     type: 'UPDATE_CART_COUNT';
-    payload: {id: Number; count: number};
-  }
-  export interface DeleteOneProduct {
-    type: 'DELETE_ONE_PRODUCT';
-    payload: {id: Number};
-  }
+    payload: { id: Number; count: number };
+}
+

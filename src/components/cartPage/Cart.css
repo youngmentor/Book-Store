@@ -40,3 +40,9 @@
 .Cart_delete_button:hover{
     color: #a20402;
 }
+.Cart_Quanty_Total_holder{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

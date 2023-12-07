@@ -8,12 +8,25 @@ import Cart from '../cartPage/Cart';
 import SearchPage from '../searchPage/SearchPage';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useCart } from '../../contextApi/CartContext';
+import { useNavigate } from 'react-router-dom';
+import { CartItem } from '../api/type.check';
 function Header() {
-  const { state: cartState } = useCart()
+  const navigate =useNavigate()
+  const { state: cartState, dispatch } = useCart()
   const [showLogin, setShowLogin] = useState<boolean>(false);
   const [showCart, setShowCart] = useState<boolean>(false);
   const [showSearch, setShowSearch] = useState<boolean>(false);
+  
+  const calculateItemTotal = (item: CartItem) => {
+    return item.productPrice * item.productQuantity;
+  };
 
+  const calculateOverallTotal = () => {
+    return cartState.cart.reduce((total, item) => total + calculateItemTotal(item), 0);
+  };
+  const handleClearCart = () => {
+    dispatch({ type: 'CLEAR_CART' });
+  };
 
   const handleShowLoginClick = () => {
     setShowLogin(!showLogin)
@@ -43,10 +56,10 @@ function Header() {
       <div className='Header_cart_button_div'>
         <span className='sub_total_div'>
            <p> Subtotal:</p>
-           <p>8468684</p>
+           <p>{calculateOverallTotal()}</p>
         </span>
         <div className='Header_cart_button_wrap'>
-        <button className='Clear_cart_button'>Clear Cart</button>
+        <button className='Clear_cart_button' onClick={handleClearCart}>Clear Cart</button>
          <button className='checkout_button'>Check Out</button>
         </div>
       </div>
@@ -62,10 +75,10 @@ function Header() {
     <div className="Header_Main">
       <div className="Header_Main_Wrap">
         <div className='Header_Logo'>
-          <h2>Book Store.</h2>
+          <h2 onClick={()=>navigate('/')}>Book Store.</h2>
         </div>
         <div className='Header_Navigation'>
-          <p>Home</p>
+          <p onClick={()=>navigate('/')}>Home</p>
           <p>Store</p>
           <p>Category</p>
           <p>Category</p>
@@ -94,3 +107,4 @@ function Header() {
 }
 
 export default Header
+

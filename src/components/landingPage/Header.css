@@ -175,6 +175,7 @@
     color: white;
     font-size: 10px;
 }
+
 @media screen and (min-width: 200px) and (max-width: 768px) {
     .Header_Navigation {
         display: none;
