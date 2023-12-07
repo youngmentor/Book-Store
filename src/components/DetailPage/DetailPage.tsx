@@ -3,7 +3,7 @@ import './DetailPage.css'
 import productArray from '../../data'
 import {useParams } from 'react-router-dom'
 import QuantityInput from './QuantityInput';
-import { SelectedProductDetails } from '../api/type.check';
+import { SelectedProductDetails } from '../interfaces/type.check';
 function DetailPage() {
     const { id: productIdParam } = useParams<{ id?: string }>();
     const [productDetails, setProductDetails] = useState<SelectedProductDetails | null>(null);

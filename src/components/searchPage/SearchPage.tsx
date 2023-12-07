@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent } from 'react';
 import { LiaTimesSolid } from "react-icons/lia";
 import { CiSearch } from "react-icons/ci";
-import { SearchComponentProp } from '../api/type.check';
+import { SearchComponentProp } from '../interfaces/type.check';
 import productArray from '../../data';
 import './SearchPage.css';
 

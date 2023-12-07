@@ -1,6 +1,6 @@
 import React from 'react';
 import './Cart.css';
-import { CartItem } from '../api/type.check';
+import { CartItem } from '../interfaces/type.check';
 import { useCart } from '../../contextApi/CartContext';
 import { MdOutlineDeleteOutline } from "react-icons/md";
 

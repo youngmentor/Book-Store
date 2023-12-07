@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useReducer, Dispatch } from 'react';
-import { CartProviderProps, CartState, AddToCartAction, UpdateQuantityAction, RemoveFromCartAction, UpdateCartCount, ClearCart } from '../components/api/type.check';
+import { CartProviderProps, CartState, AddToCartAction, UpdateQuantityAction, RemoveFromCartAction, UpdateCartCount, ClearCart } from '../components/interfaces/type.check';
 
 
 type CartAction = | AddToCartAction | RemoveFromCartAction | UpdateQuantityAction | UpdateCartCount | ClearCart;

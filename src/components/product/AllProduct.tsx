@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react';
 import { useCart } from '../../contextApi/CartContext';
 // import { SelectedProductDetails } from '../api/type.check';
-import { CartItem } from '../api/type.check';
+import { CartItem } from '../interfaces/type.check';
 function AllProduct() {
     const {dispatch} = useCart()
     const navigate = useNavigate()

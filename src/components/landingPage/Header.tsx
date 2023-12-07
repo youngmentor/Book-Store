@@ -9,7 +9,7 @@ import SearchPage from '../searchPage/SearchPage';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useCart } from '../../contextApi/CartContext';
 import { useNavigate } from 'react-router-dom';
-import { CartItem } from '../api/type.check';
+import { CartItem } from '../interfaces/type.check';
 function Header() {
   const navigate =useNavigate()
   const { state: cartState, dispatch } = useCart()

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
-import { ImageViewerProps } from './api/type.check';
+import { ImageViewerProps } from './interfaces/type.check';
 const ImageViewer: React.FC<ImageViewerProps> = ({ imageUrl }) => {
     const containerRef = useRef<HTMLDivElement | null>(null);
 
