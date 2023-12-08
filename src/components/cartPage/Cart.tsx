@@ -3,6 +3,7 @@ import './Cart.css';
 import { CartItem } from '../interfaces/type.check';
 import { useCart } from '../../contextApi/CartContext';
 import { MdOutlineDeleteOutline } from "react-icons/md";
+import { CiShoppingCart } from "react-icons/ci";
 
 const Cart: React.FC = () => {
   const { state: cartState, dispatch } = useCart();
@@ -17,8 +18,8 @@ const Cart: React.FC = () => {
   };
   const handleDelete = (id: number) => {
     //  console.log(id)
-       dispatch({ type: 'REMOVE_FROM_CART', payload: { id: id } });
-      //  console.log(cartState.cart)
+    dispatch({ type: 'REMOVE_FROM_CART', payload: { id: id } });
+    //  console.log(cartState.cart)
     // Update the cart count by subtracting 1
     // dispatch({
     //   type: 'UPDATE_CART_COUNT', payload: {
@@ -41,34 +42,46 @@ const Cart: React.FC = () => {
   const calculateItemTotal = (item: CartItem) => {
     return item.productPrice * item.productQuantity;
   };
-console.log(cartState.cart)
+  console.log(cartState.cart)
   return (
     <div className='Cart_Main'>
       <div className='Cart_Main_wrap'>
         <p>CART ({cartState.cartCount})</p>
-        {cartState.cart.map((item: CartItem) => (
-          <div key={item?.id} className='Cart_product_Card'>
-            <div className='Cart_product_image'>
-              <img src={item?.productImage} alt={item?.productName} />
-            </div>
-            <div className='Cart_product_detail'>
-              <span style={{ display: "flex", justifyContent: "space-between" }}>
-                <p>{item?.productName}</p>
-                <MdOutlineDeleteOutline className="Cart_delete_button" onClick={()=>handleDelete(item.id)} />
-              </span>
-              <p>{item?.productPrice}</p>
-              {/* <p>{item?.productQuantity}</p> */}
-              <div className='Cart_Quanty_Total_holder'>
-                <div className="Quantity_Main">
-                  <button onClick={() => handleDecrement(item.id)}>-</button>
-                  <input type="text" value={item.productQuantity} readOnly />
-                  <button style={{ borderRadius: "0px 8px 8px 0px" }} onClick={() => handleIncrement(item.id)}>+</button>
-                </div>
-                <p>Total: {calculateItemTotal(item)}</p>
+        {
+          cartState.cart.length === 0 ?
+            (
+              <div className='EmptyCartMessage'>
+                <CiShoppingCart style={{width: "30px", height: "30px"}} />
+                <p>your cart is currently empty</p>
               </div>
-            </div>
-          </div>
-        ))}
+            ) : (
+
+              cartState.cart.map((item: CartItem) => (
+                <div key={item?.id} className='Cart_product_Card'>
+                  <div className='Cart_product_image'>
+                    <img src={item?.productImage} alt={item?.productName} />
+                  </div>
+                  <div className='Cart_product_detail'>
+                    <span style={{ display: "flex", justifyContent: "space-between" }}>
+                      <p>{item?.productName}</p>
+                      <MdOutlineDeleteOutline className="Cart_delete_button" onClick={() => handleDelete(item.id)} />
+                    </span>
+                    <p>{item?.productPrice}</p>
+                    {/* <p>{item?.productQuantity}</p> */}
+                    <div className='Cart_Quanty_Total_holder'>
+                      <div className="Quantity_Main">
+                        <button onClick={() => handleDecrement(item.id)}>-</button>
+                        <input type="text" value={item.productQuantity} readOnly />
+                        <button style={{ borderRadius: "0px 8px 8px 0px" }} onClick={() => handleIncrement(item.id)}>+</button>
+                      </div>
+                      <p>Total: {calculateItemTotal(item)}</p>
+                    </div>
+                  </div>
+                </div>
+              ))
+            )
+        }
+
       </div>
     </div>
   );

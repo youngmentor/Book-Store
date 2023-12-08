@@ -26,6 +26,19 @@
     align-items: center;
     justify-content: center;
 }
+.EmptyCartMessage {
+    height: 400px;
+    text-align: center;
+    padding: 20px;
+   flex-direction: column;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family:'jost' ;
+  }
 .Cart_product_image img{
     width: 80px;
     height: 100px;

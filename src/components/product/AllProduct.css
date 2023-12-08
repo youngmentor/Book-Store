@@ -31,6 +31,20 @@
     flex-direction: column;
     cursor: pointer;
 }
+.Allproduct_Card.fly-animation {
+    animation: fadeOutTopRight 1s ease-out;
+  }
+  
+  @keyframes fadeOutTopRight {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-50px); /* Adjust the distance as needed */
+      opacity: 0;
+    }
+  }
 .AllproductImage_div{
     width: 250px;
     height: 400px;
