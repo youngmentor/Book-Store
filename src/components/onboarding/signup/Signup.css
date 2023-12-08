@@ -1,0 +1,237 @@
+.Signup_Main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    margin-top: 65px;
+}
+.LoginSignup{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.LoginSignup_wrap{
+     width: 40%;
+     height: 65%;
+     background-color: blue;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+     border-radius: 8px;
+     background-color: white;
+     box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.Login_signup_Email_input_div {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* margin-top: 10px; */
+}
+
+.Login_signup_Email_input {
+    width: 330px;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+}
+
+.Login_signup_Email_input label {
+    font-size: 18px;
+    color: lightgray;
+    font-weight: lighter;
+}
+
+.Login_signup_Password_input_div {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* margin-top: 20px; */
+
+}
+
+.Login_signup_PasswordInputWrap {
+    width: 350px;
+    height: 50px;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.Login_Signup_passwordInput {
+    width: 300px;
+    height: 30px;
+    border: none;
+    padding: 10px;
+    outline: none;
+    margin-left: 5px;
+}
+.Login-signup_Button_Div {
+    width: 70%;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.signupLogin_Button {
+    width: 350px;
+    height: 40px;
+    color: white;
+    background-color: transparent;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    transition:  0.8s;
+    color: black;
+
+}  
+.b1{
+  background: -webkit-linear-gradient(transparent 50%, #a20402 100%);
+  background-size: 100% 200px;
+  border: 1px solid #a20402;
+}
+.b1:hover{
+  background-position: -270px 40px;
+  background-size: -100px 120px;
+  color: white;
+  border: none;
+  }
+.Signup_Main_Wrap{
+    width: 90%;
+    height: 100%;
+    background-color: #F7F7F7;
+    border-radius: 8px;
+    display: flex;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+
+}
+.sign_up_img_div{
+    width: 35%;
+    height: 100%;
+    /* background-color: blue; */
+    border-radius: 8px;
+}
+.sign_up_img_div img{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px 0px 0px 8px;
+}
+.sign_up_input_div{
+    width: 65%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 10px; */
+}
+.Signup-heading{
+    width: 68%;
+    font-size: 25px;
+    font-family: 'jost';
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* background-color: red; */
+}
+.signup-input-wrap{
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    /* background-color: blue; */
+}
+.Input-div{
+    width: 500px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    /* background-color: red; */
+}
+.Input-div p{
+    width: 420px;
+    color: rgba(0, 0, 0, 0.413);
+}
+.Input-div input{
+    width: 400px;
+    height: 20px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.Input-divs{
+    width: 500px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 20px; 
+}
+.Input-divs p{
+    color: rgba(0, 0, 0, 0.413);
+}
+.Input-divs input{
+    height: 20px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.phonenumber_address_input{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Signup_button_div{
+    width:500px ;
+    display: flex;
+align-items: center;
+justify-content: center;
+/* background-color: yellow; */
+}
+.Signup_button{
+    width: 420px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    transition:  0.8s;
+    color: black;
+    border: 1px solid lightgray;
+}
+.bttn{
+    background: -webkit-linear-gradient(transparent 50%, #a20402 100%);
+    background-size: 100% 200px;
+    border: 1px solid #a20402;
+  }
+  .bttn:hover{
+    background-position: -270px 40px;
+    background-size: -100px 120px;
+    color: white;
+    border: none;
+    }

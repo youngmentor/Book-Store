@@ -1,13 +1,18 @@
 import { useState } from 'react';
 import './login.css'
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-function LoginPage() {
-
+// import { useNavigate } from 'react-router-dom';
+function LoginPage({ shwoLoginPage, setshwoLoginPage }: any) {
+  // const navigate = useNavigate()
   const [showPassword, setShowPassword] = useState(false);
 
   const handleTogglePassword = () => {
     setShowPassword(!showPassword);
   };
+  const handleLogin = () => {
+    setshwoLoginPage(shwoLoginPage)
+    // navigate('./admin-signup')
+  }
   return (
     <div className='Login_main'>
       <div className='Login_Main_Wrap'>
@@ -39,7 +44,7 @@ function LoginPage() {
         </div>
         <span style={{ width: "100%", display: "flex", alignItems: "center", gap: "5px" }}>
           <p>Don't have an account yet</p>
-          <p style={{ color: "#a20402", cursor: "pointer" }}>Signup here?</p>
+          <p style={{ color: "#a20402", cursor: "pointer" }} onClick={handleLogin} >Signup here?</p>
         </span>
       </div>
     </div>

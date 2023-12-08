@@ -11,7 +11,7 @@ function LandingPage() {
           <div className="Comic_Books books1">
             <img src="./4.avif" alt="books-img" />
             <div className="textblock">
-              <p className="Category_Name">Comics books</p>
+              <p className="Category_Name">Comic books</p>
             </div>
           </div>
           <div className="Comic_Books books2">
@@ -29,7 +29,7 @@ function LandingPage() {
           <div className="Comic_Books books4">
             <img src="./1.avif" alt="books-img" />
             <div className="textblock">
-              <p className="Category_Name">Comics books</p>
+              <p className="Category_Name">Relationship books</p>
             </div>
           </div>
         </div>

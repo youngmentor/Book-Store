@@ -3,7 +3,7 @@ import './Header.css'
 import { CiUser } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
-import LoginPage from '../onboarding/Login';
+import LoginPage from '../onboarding/login/Login';
 import Cart from '../cartPage/Cart';
 import SearchPage from '../searchPage/SearchPage';
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -44,7 +44,7 @@ function Header() {
   const isLogin = (
     showLogin &&
     <div className='Header_LoginDropper' onMouseLeave={handleShowLoginClick}>
-      <LoginPage />
+      <LoginPage/>
     </div>
   )
   const isCart = (
