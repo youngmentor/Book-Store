@@ -6,33 +6,33 @@ import { useCart } from '../../contextApi/CartContext';
 // import { SelectedProductDetails } from '../api/type.check';
 import { CartItem } from '../interfaces/type.check';
 function AllProduct() {
-    const {dispatch} = useCart()
+    const { dispatch } = useCart()
     const navigate = useNavigate()
-    const [displayedProducts, setDisplayedProducts] = useState(8);
+    // const [displayedProducts, setDisplayedProducts] = useState(8);
     const [animatedCardId, setAnimatedCardId] = useState<number | null>(null);
-    const handleLoadMore = () => {
-        setDisplayedProducts(displayedProducts + 8);
-    };
+    // const handleLoadMore = () => {
+    //     setDisplayedProducts(displayedProducts + 8);
+    // };
     const handleAddItem = (product: CartItem) => {
         dispatch({ type: 'ADD_TO_CART', payload: product });
         setAnimatedCardId(product.id);
         // Reset animation state after a delay (1s, should match the animation duration)
-      };
-      useEffect(() => {
+    };
+    useEffect(() => {
         const resetAnimation = setTimeout(() => {
-          setAnimatedCardId(null);
+            setAnimatedCardId(null);
         }, 1000);
-    
+
         return () => clearTimeout(resetAnimation);
-      }, [animatedCardId]);
+    }, [animatedCardId]);
 
     return (
         <div className='AllProduct_main'>
             <h3>Popular picks in Book store</h3>
             <div className='AllProduct_main_wrap'>
-                {productArray.slice(0, displayedProducts).map((i: any) => (
-                    <div key={i.id} 
-                    className={`Allproduct_Card ${animatedCardId === i.id ? 'fly-animation' : ''}`}
+                {productArray.slice(0, 8).map((i: any) => (
+                    <div key={i.id}
+                        className={`Allproduct_Card ${animatedCardId === i.id ? 'fly-animation' : ''}`}
                     >
                         <div className='AllproductImage_div'>
                             <img src={i.productImage} alt={i.productName} />
@@ -42,14 +42,15 @@ function AllProduct() {
                             <p className='Product_price'>NGN {i.productPrice}</p>
                         </div>
                         <div className='AddToCartPage' >
-                        <p onClick={() => handleAddItem(i)}>+Add to cart</p>
+                            <p onClick={() => handleAddItem(i)}>+Add to cart</p>
                         </div>
                     </div>
                 ))}
-                {productArray.length > displayedProducts && (
-                    <button onClick={handleLoadMore} className='Load_more_button'>Load More</button>
-                )}
+
             </div>
+            {/* {productArray.length > displayedProducts && (
+                <button onClick={handleLoadMore} className='Load_more_button'>Load More</button>
+            )} */}
         </div>
     )
 }

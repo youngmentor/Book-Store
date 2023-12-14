@@ -11,12 +11,12 @@ import { useCart } from '../../contextApi/CartContext';
 import { useNavigate } from 'react-router-dom';
 import { CartItem } from '../interfaces/type.check';
 function Header() {
-  const navigate =useNavigate()
+  const navigate = useNavigate()
   const { state: cartState, dispatch } = useCart()
   const [showLogin, setShowLogin] = useState<boolean>(false);
   const [showCart, setShowCart] = useState<boolean>(false);
   const [showSearch, setShowSearch] = useState<boolean>(false);
-  
+
   const calculateItemTotal = (item: CartItem) => {
     return item.productPrice * item.productQuantity;
   };
@@ -44,7 +44,7 @@ function Header() {
   const isLogin = (
     showLogin &&
     <div className='Header_LoginDropper' onMouseLeave={handleShowLoginClick}>
-      <LoginPage/>
+      <LoginPage />
     </div>
   )
   const isCart = (
@@ -53,16 +53,18 @@ function Header() {
       <div className='Header_CartDropper_Wrap'>
         <Cart />
       </div>
-      <div className='Header_cart_button_div'>
-        <span className='sub_total_div'>
-           <p> Subtotal:</p>
-           <p>{calculateOverallTotal()}</p>
-        </span>
-        <div className='Header_cart_button_wrap'>
-        <button className='Clear_cart_button' onClick={handleClearCart}>Clear Cart</button>
-         <button className='checkout_button' onClick={()=>navigate('./checkout')}>Check Out</button>
-        </div>
-      </div>
+      {cartState.cart.length > 0 &&
+        <div className='Header_cart_button_div'>
+          <span className='sub_total_div'>
+            <p> Subtotal:</p>
+            <p>{calculateOverallTotal()}</p>
+          </span>
+          <div className='Header_cart_button_wrap'>
+            <button className='Clear_cart_button' onClick={handleClearCart}>Clear Cart</button>
+            <button className='checkout_button' onClick={() => navigate('./checkout')}>Check Out</button>
+          </div>
+        </div>}
+
     </div>
   )
   const isSearchPage = (
@@ -75,10 +77,10 @@ function Header() {
     <div className="Header_Main">
       <div className="Header_Main_Wrap">
         <div className='Header_Logo'>
-          <h2 onClick={()=>navigate('/')}>Book Store.</h2>
+          <h2 onClick={() => navigate('/')}>Book Store.</h2>
         </div>
         <div className='Header_Navigation'>
-          <p onClick={()=>navigate('/')}>Home</p>
+          <p onClick={() => navigate('/')}>Home</p>
           <p>Store</p>
           <p>Category</p>
           <p>Category</p>
