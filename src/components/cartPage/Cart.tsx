@@ -14,7 +14,7 @@ const Cart: React.FC = () => {
       dispatch({ type: 'UPDATE_CART_COUNT', payload: { id: productId, count: +1 } });
     }
   };
-  const handleDelete = (id: number) => {
+ const handleDelete = (id: number) => {
     dispatch({ type: 'REMOVE_FROM_CART', payload: { id: id } });
   };
 
@@ -44,7 +44,7 @@ const Cart: React.FC = () => {
           cartState.cart.length === 0 ?
             (
               <div className='EmptyCartMessage'>
-                <CiShoppingCart style={{width: "30px", height: "30px"}} />
+                <CiShoppingCart style={{ width: "30px", height: "30px" }} />
                 <p>your cart is currently empty</p>
                 <p>Go to shop, to Continue Shopping</p>
               </div>

@@ -92,12 +92,16 @@ function Header() {
           <div className='Header_icons' onMouseEnter={handleShowLoginClick} >
             <CiUser className="icons" />
           </div>
-          <div className='Header_icons' onMouseEnter={handleShowCartClick} >
+          <div className='Header_icons cart' onMouseEnter={handleShowCartClick} >
             <CiShoppingCart className="icons" />
           </div>
           <p className='Header_cart_count_display'>{cartState.cartCount}</p>
         </div>
         <div className='Header_burger'>
+          <div className='Header_icons cart' onMouseEnter={handleShowCartClick} >
+            <CiShoppingCart className="icons" />
+          </div>
+          <p className='Header_cart_count_display'>{cartState.cartCount}</p>
           <RxHamburgerMenu className="Hamburger_icon" />
         </div>
         {showSearch && isSearchPage}
