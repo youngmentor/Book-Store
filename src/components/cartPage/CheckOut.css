@@ -1,0 +1,153 @@
+.Checkout-main {
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CheckOut-main-wrap {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.checkout-heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout-heading p {
+    font-size: 40px;
+    font-family: 'jost';
+}
+
+.checkout-billing-details {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.checkout-billing-info {
+    width: 60%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkout-order-info {
+    width: 40%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid lightgray;
+}
+.checkout-order-info-wrap {
+    width: 90%;
+    height: 90%;
+    /* background-color: purple; */
+}
+.checkout_order_info_details{
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+
+}
+.checkout_info_payment_gateways{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-top: 1px solid lightgray;
+    padding: 10px;
+}
+.checkout_info_payment_gateways button{
+    width: 200px;
+    height: 40px;
+    border: none;
+}
+.billing_heading {
+    font-size: 25px;
+    font-family: 'jost';
+}
+
+.billing_names {
+    width: 600px;
+    /* background-color: yellow; */
+    display: flex;
+    gap: 20px;
+}
+
+.billing_names p {
+    color: gray;
+}
+
+.blling_first_name {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blling_Address {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blling_Address input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+
+}
+
+.blling_first_name input {
+    width: 280px;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+}
+
+.blling_first_name select {
+    width: 300px;
+    height: 50px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+}
+
+.checkout_info_data {
+    width: 100%;
+    display: flex;
+    height: 20%;
+    gap: 10px;
+    overflow-y: scroll;
+    border-bottom: 1px solid lightgray;
+    /* background-color: green; */
+}
+
+.checkout_info_data p {
+    font-size: 20px;
+    height: 40px;
+    font-family: 'jost';
+
+}

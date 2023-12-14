@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Cart.css';
 import { CartItem } from '../interfaces/type.check';
 import { useCart } from '../../contextApi/CartContext';
@@ -7,8 +7,6 @@ import { CiShoppingCart } from "react-icons/ci";
 
 const Cart: React.FC = () => {
   const { state: cartState, dispatch } = useCart();
-  // const { price, total } = cartState;
-
   const handleIncrement = (productId: number) => {
     const existingItem = cartState.cart.find(item => item.id === productId);
     if (existingItem) {
@@ -17,16 +15,7 @@ const Cart: React.FC = () => {
     }
   };
   const handleDelete = (id: number) => {
-    //  console.log(id)
     dispatch({ type: 'REMOVE_FROM_CART', payload: { id: id } });
-    //  console.log(cartState.cart)
-    // Update the cart count by subtracting 1
-    // dispatch({
-    //   type: 'UPDATE_CART_COUNT', payload: {
-    //     count: -1,
-    //     id: id
-    //   }
-    // });
   };
 
 
@@ -42,7 +31,11 @@ const Cart: React.FC = () => {
   const calculateItemTotal = (item: CartItem) => {
     return item.productPrice * item.productQuantity;
   };
-  console.log(cartState.cart)
+
+  useEffect(() => {
+    // Save cart to local storage whenever it changes
+    localStorage.setItem('cart', JSON.stringify(cartState.cart));
+  }, [cartState.cart]);
   return (
     <div className='Cart_Main'>
       <div className='Cart_Main_wrap'>
@@ -53,6 +46,7 @@ const Cart: React.FC = () => {
               <div className='EmptyCartMessage'>
                 <CiShoppingCart style={{width: "30px", height: "30px"}} />
                 <p>your cart is currently empty</p>
+                <p>Go to shop, to Continue Shopping</p>
               </div>
             ) : (
 

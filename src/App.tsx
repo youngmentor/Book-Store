@@ -7,6 +7,7 @@ import Header from './components/landingPage/Header'
 import AdminSignup from './components/onboarding/signup/AdminSignup'
 import LoginPage from './components/onboarding/login/Login'
 import UserSignup from './components/onboarding/signup/UserSignup'
+import CheckOut from './components/cartPage/CheckOut'
 function App() {
   const [] = useState(0)
 
@@ -19,8 +20,8 @@ function App() {
             <Route path='detail/:id' element={<DetailPage/>}/>
             <Route path='/admin-signup' element={<AdminSignup/>}/>
             <Route path='/login' element={<LoginPage/>}/>
-            <Route path='/user-signup' element={<UserSignup
-            />}/>
+            <Route path='/user-signup' element={<UserSignup/>}/>
+            <Route path='/checkout' element={<CheckOut/>}/>
          </Routes>
       </HashRouter>
     </div>

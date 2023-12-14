@@ -60,7 +60,7 @@ function Header() {
         </span>
         <div className='Header_cart_button_wrap'>
         <button className='Clear_cart_button' onClick={handleClearCart}>Clear Cart</button>
-         <button className='checkout_button'>Check Out</button>
+         <button className='checkout_button' onClick={()=>navigate('./checkout')}>Check Out</button>
         </div>
       </div>
     </div>

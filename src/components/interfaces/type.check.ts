@@ -59,4 +59,7 @@ export interface UpdateCartCount {
     type: 'UPDATE_CART_COUNT';
     payload: { id: Number; count: number };
 }
-
+export interface SetCart {
+    type: 'SET_CART';
+    payload: CartItem;
+}

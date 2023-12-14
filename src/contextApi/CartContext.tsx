@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useReducer, Dispatch } from 'react';
-import { CartProviderProps, CartState, AddToCartAction, UpdateQuantityAction, RemoveFromCartAction, UpdateCartCount, ClearCart } from '../components/interfaces/type.check';
+import { CartProviderProps, CartState, AddToCartAction, UpdateQuantityAction, RemoveFromCartAction, UpdateCartCount, ClearCart, SetCart } from '../components/interfaces/type.check';
 
 
-type CartAction = | AddToCartAction | RemoveFromCartAction | UpdateQuantityAction | UpdateCartCount | ClearCart;
+type CartAction = | AddToCartAction | RemoveFromCartAction | UpdateQuantityAction | UpdateCartCount | ClearCart| SetCart;
 
 type CartContextType = {
     state: CartState;
@@ -101,6 +101,12 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
                 ...state,
                 cartCount: state.cartCount + action.payload.count,
             };
+            case 'SET_CART':
+                // Set the entire cart from local storage
+                return { 
+                    ...state, 
+                    cart: state.cart 
+                };
 
         default:
             return state;
