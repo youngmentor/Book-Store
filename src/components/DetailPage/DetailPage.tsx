@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './DetailPage.css'
 import productArray from '../../data'
-import {useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import QuantityInput from './QuantityInput';
 import { SelectedProductDetails } from '../interfaces/type.check';
 function DetailPage() {
@@ -17,13 +17,6 @@ function DetailPage() {
         if (productDetails) {
             // Check if there is enough quantity available in the store
             if (quantity <= productDetails.productQuantity) {
-                // Create a copy of the product with the selected quantity
-                // const productToAdd = {
-                //   ...productDetails,
-                //   productQuantity: quantity,
-                // };
-
-                // Update the product quantity in the state (subtract the quantity added to the cart)
                 setProductDetails({
                     ...productDetails,
                     productQuantity: productDetails.productQuantity - quantity,

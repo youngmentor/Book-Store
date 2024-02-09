@@ -3,7 +3,7 @@ import productArray from '../../data'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 import { useCart } from '../../contextApi/CartContext';
-// import { SelectedProductDetails } from '../api/type.check';
+import { SelectedProductDetails } from '../interfaces/type.check';
 import { CartItem } from '../interfaces/type.check';
 function AllProduct() {
     const { dispatch } = useCart()
@@ -30,7 +30,7 @@ function AllProduct() {
         <div className='AllProduct_main'>
             <h3>Popular picks in Book store</h3>
             <div className='AllProduct_main_wrap'>
-                {productArray.slice(0, 8).map((i: any) => (
+                {productArray.slice(0, 8).map((i: SelectedProductDetails) => (
                     <div key={i.id}
                         className={`Allproduct_Card ${animatedCardId === i.id ? 'fly-animation' : ''}`}
                     >
